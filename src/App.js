@@ -1,23 +1,33 @@
-import logo from './logo.svg';
 import './App.css';
+import Card from './components/card/Card';
+import CardList from './components/card/CardList';
+import { GlobalStyle } from './GlobalStyle';
+import { ThemeProvider } from 'styled-components';
+import Card2 from './components/card/Card2';
+
+const theme = {};
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <GlobalStyle />
+      {/* <CardList>
+        <Card secondary={true}></Card>
+        <Card></Card>
+        <Card></Card>
+        <Card></Card>
+        <Card></Card>
+        <Card></Card>
+        <Card></Card>
+      </CardList> */}
+
+      <CardList>
+        <Card2 secondary={true} />
+        <Card2 />
+        <Card2 />
+        <Card2 />
+        <Card2 />
+      </CardList>
     </div>
   );
 }
