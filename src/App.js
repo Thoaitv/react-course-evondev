@@ -4,6 +4,9 @@ import CardList from './components/card/CardList';
 import { GlobalStyle } from './GlobalStyle';
 import { ThemeProvider } from 'styled-components';
 import Card2 from './components/card/Card2';
+import Photo from './components/photo/Photo';
+import '../src/index.css';
+import Couter from './components/counter/Couter';
 
 const theme = {};
 
@@ -20,14 +23,19 @@ function App() {
         <Card></Card>
         <Card></Card>
       </CardList> */}
-
-      <CardList>
+      {/* <CardList>
         <Card2 secondary={true} />
         <Card2 />
         <Card2 />
         <Card2 />
         <Card2 />
-      </CardList>
+      </CardList> */}
+
+      {/* Load PHOTO image from API */}
+      {/* <Photo /> */}
+
+      {/* Counter */}
+      <Couter />
     </div>
   );
 }

@@ -105,6 +105,10 @@ const Card2 = (prop) => {
   console.log('ThoaiTV: Card -> prop', prop);
   return (
     <StyledCard secondary={prop.secondary} fontSize="25px">
+      <div>
+        <h1 className="text-3xl font-bold underline">Hello world!</h1>
+      </div>
+
       <div className="card-image">
         <img
           src="https://cdn.dribbble.com/users/2400293/screenshots/16527147/media/f079dc5596a5fb770016c4ea506cd77b.png?compress=1&resize=1000x750&vertical=top"
