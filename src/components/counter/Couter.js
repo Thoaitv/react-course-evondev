@@ -10,20 +10,33 @@ const Counter = () => {
   //     }, 1000);
   //   };
 
-  //   const [info, setInfo] = useState({
-  //     firstName: 'Thoai',
-  //     lastName: 'TV',
-  //   });
-
-  //   useEffect(() => {
-  //     console.log('from input');
-  //   }, [info.lastName]);
+  const [info, setInfo] = useState({
+    firstName: 'Thoai',
+    lastName: 'TV',
+  });
 
   useEffect(() => {
-    console.log(`count: ${count}`);
-  }, [count]);
+    console.log('from input');
+  }, [info.lastName]);
+
+  //   useEffect(() => {
+  //     console.log(`count: ${count}`);
+  //   }, []);
+
   return (
     <div>
+      <input
+        type="text"
+        name="firstName"
+        value={info.firstName}
+        onChange={(e) =>
+          setInfo({
+            ...info,
+            firstName: e.target.value,
+          })
+        }
+      />
+
       <span className="text-2xl font-bold">{count}</span>
       <button
         onClick={() => setCount(count + 1)}

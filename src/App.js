@@ -7,6 +7,9 @@ import Card2 from './components/card/Card2';
 import Photo from './components/photo/Photo';
 import '../src/index.css';
 import Couter from './components/counter/Couter';
+import Timer from './components/timer/Timer';
+import Header from './components/header/Header';
+import HackerNews from './components/news/HackerNews';
 
 const theme = {};
 
@@ -35,7 +38,15 @@ function App() {
       {/* <Photo /> */}
 
       {/* Counter */}
-      <Couter />
+      {/* <Couter /> */}
+
+      {/* Clean up để lấy mess cuối */}
+      {/* <Timer /> */}
+
+      {/* <Header /> */}
+
+      {/* news */}
+      <HackerNews />
     </div>
   );
 }

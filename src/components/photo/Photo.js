@@ -19,9 +19,11 @@ const Photo = () => {
   const [nextPage, setNextPage] = useState(1);
 
   console.log(photos);
+
   const handleLoadMore = () => {
     getPhotos(nextPage).then((img) => {
       const newPhoto = [...photos, ...img];
+
       console.log('ThoaiTV: handleLoadMore -> newPhoto', newPhoto);
       setPhotos(newPhoto);
       setNextPage(nextPage + 1);
