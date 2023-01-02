@@ -10,7 +10,9 @@ import Couter from './components/counter/Couter';
 import Timer from './components/timer/Timer';
 import Header from './components/header/Header';
 import HackerNews from './components/news/HackerNews';
-
+import MovieSearch from './components/search/MovieSearch';
+import SignUpForm from './components/form/SignUpForm';
+import SignUpFormHook from './components/form/SignUpFormHook';
 const theme = {};
 
 function App() {
@@ -46,7 +48,11 @@ function App() {
       {/* <Header /> */}
 
       {/* news */}
-      <HackerNews />
+      {/* <HackerNews /> */}
+
+      {/* <MovieSearch/> */}
+      {/* <SignUpForm /> */}
+      <SignUpFormHook />
     </div>
   );
 }
