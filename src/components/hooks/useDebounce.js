@@ -7,7 +7,7 @@ export default function useDebounce(initializeValue = "", delay = 1000) {
       setDebounceValue(initializeValue);
     }, delay);
     return () => {
-      clearTimeout(timer);
+      clearTimeout(timer); 
     };
   }, [delay, initializeValue]);
   return debounceValue;

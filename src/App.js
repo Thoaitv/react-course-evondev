@@ -13,11 +13,19 @@ import HackerNews from './components/news/HackerNews';
 import MovieSearch from './components/search/MovieSearch';
 import SignUpForm from './components/form/SignUpForm';
 import SignUpFormHook from './components/form/SignUpFormHook';
+import RegisterRHF from './components/form/RegisterRHF';
+import { Fragment } from 'react';
+import Modal from './components/modal/Modal';
+import { useState } from 'react';
+import DropdownPortal from './components/control/DropdownPortal';
+import Tooltip from './components/tooltip/Tooltip';
 const theme = {};
 
 function App() {
+  const [showModal, setShowModal] = useState(false);
+
   return (
-    <div>
+    <Fragment>
       <GlobalStyle />
       {/* <CardList>
         <Card secondary={true}></Card>
@@ -35,25 +43,41 @@ function App() {
         <Card2 />
         <Card2 />
       </CardList> */}
-
       {/* Load PHOTO image from API */}
       {/* <Photo /> */}
-
       {/* Counter */}
       {/* <Couter /> */}
-
       {/* Clean up để lấy mess cuối */}
       {/* <Timer /> */}
-
       {/* <Header /> */}
-
       {/* news */}
       {/* <HackerNews /> */}
-
       {/* <MovieSearch/> */}
       {/* <SignUpForm /> */}
-      <SignUpFormHook />
-    </div>
+      {/* <SignUpFormHook /> */}
+      {/* <RegisterRHF /> */}
+
+      {/* Start MODAL */}
+      {/* <div>
+        <Modal open={showModal} handleClose={() => setShowModal(false)} />
+      </div>
+      <button
+        className="p-4 text-white bg-blue-500 rounded-lg"
+        onClick={() => setShowModal(true)}>
+        Show modal
+      </button>
+      <div className="relative z-30">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium,
+        adipisci!
+      </div> */}
+      {/* END MODAL */}
+
+      {/* <div className="p-5 overflow-hidden">
+        <DropdownPortal />
+      </div> */}
+
+      <Tooltip text={'Hover'}>Đây là nội dung</Tooltip>
+    </Fragment>
   );
 }
 

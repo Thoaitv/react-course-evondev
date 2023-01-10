@@ -39,6 +39,7 @@ const SignUpFormHook = () => {
     console.log('as');
     if (isValid) {
       console.log('send data to backend');
+      console.log('values', values);
 
       reset({
         firstName: '',
@@ -94,12 +95,11 @@ const SignUpFormHook = () => {
       </div>
       <div className="flex flex-col gap-2 mb-5">
         <label htmlFor="email">Email address</label>
-        <input
-          type="text"
+        <MyInput
+          name="email"
+          placeholder="enter email"
           id="email"
-          placeholder="Enter your email"
-          className="p-4 rounded-md border border-gray-100"
-          {...register('email')}
+          control={control}
         />
       </div>
       <div className="gap-2 mb-5">
@@ -126,6 +126,38 @@ const SignUpFormHook = () => {
         </button>
       </div>
     </form>
+  );
+};
+
+// const MyInput = ({ control, ...props }) => {
+//   return (
+//     <Controller
+//       name={props.name}
+//       control={control}
+//       defaultValue=""
+//       render={({ field }) => (
+//         <input
+//           className="p-4 rounded-md border border-gray-100"
+//           {...field}
+//           {...props}
+//         />
+//       )}></Controller>
+//   );
+// };
+
+const MyInput = ({ control, ...props }) => {
+  const { field } = useController({
+    control,
+    name: props.name,
+    defaultValue: '',
+  });
+
+  return (
+    <input
+      className="p-4 rounded-md border border-gray-100"
+      {...field}
+      {...props}
+    />
   );
 };
 
