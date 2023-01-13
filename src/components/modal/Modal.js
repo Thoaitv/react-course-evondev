@@ -1,7 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import PropTypes from 'prop-types';
 
 const Modal = ({ open = false, handleClose = () => {} }) => {
+  Modal.prototype = {
+    open: PropTypes.bool,
+    handleClose: PropTypes.func,
+  };
   if (typeof document === 'undefined') return <div className="modal"></div>;
   console.log('open', open);
   return ReactDOM.createPortal(

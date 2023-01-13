@@ -19,6 +19,7 @@ import Modal from './components/modal/Modal';
 import { useState } from 'react';
 import DropdownPortal from './components/control/DropdownPortal';
 import Tooltip from './components/tooltip/Tooltip';
+import Portal from './components/portal/Portal';
 const theme = {};
 
 function App() {
@@ -76,7 +77,17 @@ function App() {
         <DropdownPortal />
       </div> */}
 
-      <Tooltip text={'Hover'}>Đây là nội dung</Tooltip>
+      {/* <Tooltip text={'Hover'}>
+        Đây là nộiádaaaaa Lorem ipsum dolor sit, amet consectetur adipisicing
+        elit. Sapiente fugiat odit earum repellendus sunt deleniti laudantium
+        facilis voluptates sint expedita. dung
+      </Tooltip> */}
+
+      {/* PropTypes */}
+      {/* <Modal open={true} /> */}
+
+      {/* Portal Advance */}
+      <Portal />
     </Fragment>
   );
 }
