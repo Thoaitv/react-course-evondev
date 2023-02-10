@@ -27,6 +27,13 @@ import { GalleryProvider } from './components/contexts/gallery-context';
 import PhotoList from './components/gallery/PhotoList';
 import CartList from './components/gallery/CartList';
 import DemoRouter from './components/demo-router/DemoRouter';
+import WithLoading from './components/advance/higher-order-component/withLoading';
+import FetchingData from './components/advance/higher-order-component/FetchingData';
+import Title from './components/advance/render-props/Title';
+import HandleValue from './components/advance/render-props/HandleValue';
+import Input from './components/advance/render-props/HandleValue';
+import Accordion from './components/advance/react-composition/Accordion';
+import Editable from './components/advance/react-composition/Editable';
 const theme = {};
 
 function App() {
@@ -108,7 +115,24 @@ function App() {
       </AuthProvider> */}
 
       {/* demo router */}
-      <DemoRouter />
+      {/* <DemoRouter /> */}
+
+      {/* Higher order components */}
+      {/* <FetchingData /> */}
+
+      {/* render props */}
+      {/* <Title
+        render={() => {
+          return <h1>Thoai</h1>;
+        }} />*/}
+      {/* <Title>{() => <>Thoai</
+      h1>}</Title> */}
+
+      {/* <HandleValue /> */}
+
+      {/* React composition:  */}
+      <Accordion />
+      {/* <Editable /> */}
     </Fragment>
   );
 }
