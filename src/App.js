@@ -34,8 +34,11 @@ import HandleValue from './components/advance/render-props/HandleValue';
 import Input from './components/advance/render-props/HandleValue';
 import Accordion from './components/advance/react-composition/Accordion';
 import Editable from './components/advance/react-composition/Editable';
+import Switch from './components/advance/props-collection/Switch';
+import PropsCollection from './components/advance/props-collection/PropsCollection';
+import Count from './components/advance/performance/Count';
+import Performance from './components/advance/performance/Performance';
 const theme = {};
-
 function App() {
   const [showModal, setShowModal] = useState(false);
 
@@ -131,8 +134,15 @@ function App() {
       {/* <HandleValue /> */}
 
       {/* React composition:  */}
-      <Accordion />
+      {/* <Accordion header="Accordion?">Lorem, ipsum.</Accordion>
+      <Accordion header="Accordion?">Lorem, ipsum.</Accordion> */}
       {/* <Editable /> */}
+
+      {/* Props collection */}
+      {/* <PropsCollection /> */}
+
+      {/* Tối ưu re-render useMemo, useCallback */}
+      <Performance />
     </Fragment>
   );
 }
