@@ -38,6 +38,8 @@ import Switch from './components/advance/props-collection/Switch';
 import PropsCollection from './components/advance/props-collection/PropsCollection';
 import Count from './components/advance/performance/Count';
 import Performance from './components/advance/performance/Performance';
+import FirebaseApp from './firebase/FirebaseApp';
+import FirebaseAuth from './firebase/FirebaseAuth';
 const theme = {};
 function App() {
   const [showModal, setShowModal] = useState(false);
@@ -142,7 +144,13 @@ function App() {
       {/* <PropsCollection /> */}
 
       {/* Tối ưu re-render useMemo, useCallback */}
-      <Performance />
+      {/* <Performance /> */}
+
+      {/* FIREBASE */}
+      {/* <FirebaseApp /> */}
+
+      {/* FIREBASE AUTHENTICATION */}
+      <FirebaseAuth />
     </Fragment>
   );
 }
